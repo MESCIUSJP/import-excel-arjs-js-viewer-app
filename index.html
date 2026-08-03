@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ActiveReportsJS Viewer</title>
+
+    <link rel="stylesheet" href="./node_modules/@mescius/activereportsjs/styles/ar-js-ui.css" />
+    <link rel="stylesheet" href="./node_modules/@mescius/activereportsjs/styles/ar-js-viewer.css" />
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-core.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-viewer.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-pdf.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-xlsxAdv.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-html.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs/dist/ar-js-tabular-data.js"></script>
+    <script type="text/javascript" src="./node_modules/@mescius/activereportsjs-i18n/dist/ar-js-locales.js"></script>
+    <style>
+      #viewer-host {
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="viewer-host"></div>
+    <script>
+      var viewer = new MESCIUS.ActiveReportsJS.ReportViewer.Viewer("#viewer-host", { language: "ja" });
+      viewer.open("./reports/quick-start-sample.rdlx-json");
+    </script>
+  </body>
+</html>
